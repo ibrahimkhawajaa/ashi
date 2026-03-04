@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import "./App.css"
-
+import Vid from './assets/V1.mp4'
 const App = () => {
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [showDetail, setShowDetail] = useState(false);
@@ -502,7 +502,7 @@ const App = () => {
             className="w-full h-full object-cover"
             poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
           >
-            <source src="https://player.vimeo.com/external/434045026.hd.mp4?s=81a0a6e6b5e5b5a5b5a5b5a5b5a5b5a5b5a5b5a5&profile_id=175" type="video/mp4" />
+            <source src={Vid} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
@@ -600,7 +600,7 @@ const App = () => {
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-gray-900">
               FEATURED
             </h2>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-gray-300 -mt-4 md:-mt-6">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-[#FFBF00] -mt-4 md:-mt-6">
               PROPERTIES
             </h2>
           </div>
@@ -667,8 +667,8 @@ const App = () => {
           </div>
           
           <div className="text-center mt-10 md:mt-12">
-            <button className="border border-gray-900 text-gray-900 px-12 md:px-16 py-4 text-xs font-light hover:bg-gray-900 hover:text-white transition-all duration-300">
-              VIEW ALL PROPERTIES
+            <button className=" text-gray-900 px-12 md:px-16 py-4 text-xs font-light  duration-300">
+              VIEW ALL PROPERTIES 
             </button>
           </div>
         </div>
