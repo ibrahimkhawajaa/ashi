@@ -411,7 +411,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans antialiased relative">
+    <div className="min-h-screen bg-white font-sans antialiased relative overflow-x-hidden">
       {/* Floating Navbar - Mobile Friendly */}
       <nav ref={navbarRef} className="fixed top-4 md:top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] md:w-auto">
         <div className="bg-white/70 backdrop-blur-md border border-white/30 rounded-full px-4 md:px-8 py-2 md:py-3 shadow-lg flex items-center justify-between md:justify-center text-gray-800 font-['Inter'] font-medium tracking-wide">
@@ -508,15 +508,15 @@ const App = () => {
         </div>
         
         <div className="relative text-center text-white max-w-5xl px-4 z-10">
-          <h1 className="hero-title text-6xl md:text-8xl lg:text-9xl font-light mb-6 tracking-tight leading-none">
+          <h1 className="hero-title text-5xl md:text-7xl lg:text-8xl font-light mb-4 md:mb-6 tracking-tight leading-none">
             FIND YOUR<br />SANCTUARY
           </h1>
-          <p className="hero-subtitle text-lg md:text-xl lg:text-2xl mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="hero-subtitle text-base md:text-lg lg:text-xl mb-8 md:mb-10 font-light max-w-2xl mx-auto leading-relaxed">
             Curated luxury properties by Ashi
           </p>
           <a 
             href="#properties" 
-            className="hero-button inline-block bg-white/10 backdrop-blur-md border border-white/30 text-white px-12 py-4 text-sm font-light hover:bg-white/20 transition-all duration-300 tracking-wide"
+            className="hero-button inline-block bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 md:px-12 py-3 md:py-4 text-xs md:text-sm font-light hover:bg-white/20 transition-all duration-300 tracking-wide"
           >
             EXPLORE COLLECTION
           </a>
@@ -527,64 +527,64 @@ const App = () => {
         </div>
       </section>
 
-      {/* About Section - BOLD MODERN DESIGN */}
-      <section ref={aboutRef} id="about" className="py-32 px-4 w-full bg-white">
-        <div className="max-w-7xl mx-auto">
-          {/* Large Name Header */}
-          <div className="mb-20 about-animate">
-            <h2 className="text-8xl md:text-9xl lg:text-[10rem] font-light tracking-tight leading-none text-gray-900">
+      {/* About Section - Fixed Overflow */}
+      <section ref={aboutRef} id="about" className="py-16 md:py-24 px-4 w-full bg-white">
+        <div className="max-w-6xl mx-auto">
+          {/* Large Name Header - Reduced size */}
+          <div className="mb-12 md:mb-16 about-animate">
+            <h2 className="text-6xl md:text-8xl lg:text-9xl font-light tracking-tight leading-none text-gray-900">
               ASHI
             </h2>
-            <h2 className="text-8xl md:text-9xl lg:text-[10rem] font-light tracking-tight leading-none text-gray-300 -mt-8 md:-mt-12">
+            <h2 className="text-6xl md:text-8xl lg:text-9xl font-light tracking-tight leading-none text-gray-300 -mt-4 md:-mt-8">
               VERMA
             </h2>
           </div>
 
-          {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-            {/* Left Column - Image with stats overlay */}
+          {/* Two Column Layout - Better spacing */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Left Column - Image */}
             <div className="about-animate">
               <div className="relative">
                 <img 
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                   alt="Ashi Verma"
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-[400px] md:h-[500px] object-cover"
                 />
-                            </div>
+              </div>
             </div>
 
-            {/* Right Column - Bio with large stats */}
-            <div className="about-animate space-y-12">
-              <div className="space-y-6">
-                <p className="text-2xl leading-relaxed text-gray-700">
+            {/* Right Column - Bio */}
+            <div className="about-animate space-y-6 md:space-y-8">
+              <div className="space-y-4">
+                <p className="text-lg md:text-xl leading-relaxed text-gray-700">
                   With over a decade of experience in luxury real estate, I've built a reputation for discretion, expertise, and an unwavering commitment to architectural excellence.
                 </p>
-                <p className="text-2xl leading-relaxed text-gray-500">
+                <p className="text-lg md:text-xl leading-relaxed text-gray-500">
                   Each property is carefully selected for its unique character, location, and potential. I don't just sell homes—I curate lifestyles.
                 </p>
               </div>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-8 pt-8 border-t border-gray-200">
+              <div className="grid grid-cols-2 gap-4 md:gap-6 pt-4 md:pt-6 border-t border-gray-200">
                 <div>
-                  <p className="text-6xl font-light text-gray-900">500+</p>
-                  <p className="text-sm text-gray-400 mt-2 tracking-wide">PROPERTIES SOLD</p>
+                  <p className="text-4xl md:text-5xl font-light text-gray-900">500+</p>
+                  <p className="text-xs text-gray-400 mt-1 tracking-wide">PROPERTIES SOLD</p>
                 </div>
                 <div>
-                  <p className="text-6xl font-light text-gray-900">$250M+</p>
-                  <p className="text-sm text-gray-400 mt-2 tracking-wide">IN SALES</p>
+                  <p className="text-4xl md:text-5xl font-light text-gray-900">$250M+</p>
+                  <p className="text-xs text-gray-400 mt-1 tracking-wide">IN SALES</p>
                 </div>
               </div>
 
               {/* Recognition */}
-              <div className="bg-gray-50 p-8">
-                <p className="text-lg font-light text-gray-900 mb-4">RECOGNITION</p>
-                <div className="flex flex-wrap gap-4">
-                  <span className="text-sm text-gray-600">TOP 1% AGENT</span>
-                  <span className="text-sm text-gray-400">—</span>
-                  <span className="text-sm text-gray-600">5-STAR RATED</span>
-                  <span className="text-sm text-gray-400">—</span>
-                  <span className="text-sm text-gray-600">LUXURY SPECIALIST</span>
+              <div className="bg-gray-50 p-6">
+                <p className="text-base font-light text-gray-900 mb-3">RECOGNITION</p>
+                <div className="flex flex-wrap gap-2 md:gap-3">
+                  <span className="text-xs text-gray-600">TOP 1% AGENT</span>
+                  <span className="text-xs text-gray-400">—</span>
+                  <span className="text-xs text-gray-600">5-STAR RATED</span>
+                  <span className="text-xs text-gray-400">—</span>
+                  <span className="text-xs text-gray-600">LUXURY SPECIALIST</span>
                 </div>
               </div>
             </div>
@@ -593,20 +593,20 @@ const App = () => {
       </section>
 
       {/* Properties Section - REDESIGNED CARDS */}
-      <section ref={propertiesRef} id="properties" className="py-32 px-4 w-full bg-gray-50">
+      <section ref={propertiesRef} id="properties" className="py-16 md:py-24 px-4 w-full bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <div className="mb-20">
-            <h2 className="text-7xl md:text-8xl lg:text-9xl font-light tracking-tight text-gray-900">
+          {/* Section Header - Reduced size */}
+          <div className="mb-12 md:mb-16">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-gray-900">
               FEATURED
             </h2>
-            <h2 className="text-7xl md:text-8xl lg:text-9xl font-light tracking-tight text-gray-300 -mt-6 md:-mt-8">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-gray-300 -mt-4 md:-mt-6">
               PROPERTIES
             </h2>
           </div>
           
-          {/* MODERN CARD DESIGN - Full width cards with overlay */}
-          <div className="space-y-8">
+          {/* MODERN CARD DESIGN */}
+          <div className="space-y-6">
             {properties.map((property, index) => (
               <div 
                 key={property.id} 
@@ -614,39 +614,39 @@ const App = () => {
                 onClick={() => openPropertyDetail(property)}
               >
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-                  {/* Image - takes 2/3 on desktop */}
-                  <div className="md:col-span-2 relative overflow-hidden h-[300px] md:h-[400px]">
+                  {/* Image */}
+                  <div className="md:col-span-2 relative overflow-hidden h-[250px] md:h-[350px]">
                     <img 
                       src={property.image} 
                       alt={property.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
                     />
-                    <div className="absolute top-6 left-6 bg-white px-4 py-2">
-                      <span className="text-sm font-light">{property.price}</span>
+                    <div className="absolute top-4 left-4 bg-white px-3 py-1.5">
+                      <span className="text-xs font-light">{property.price}</span>
                     </div>
                   </div>
                   
-                  {/* Content - takes 1/3 on desktop */}
-                  <div className="md:col-span-1 p-8 flex flex-col justify-between">
+                  {/* Content */}
+                  <div className="md:col-span-1 p-6 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-3xl font-light mb-2">{property.title}</h3>
-                      <p className="text-sm text-gray-400 mb-6">{property.location}</p>
+                      <h3 className="text-xl md:text-2xl font-light mb-1">{property.title}</h3>
+                      <p className="text-xs text-gray-400 mb-4">{property.location}</p>
                       
                       {/* Specs */}
-                      <div className="space-y-3 mb-8">
-                        <div className="flex justify-between text-sm border-b border-gray-100 pb-2">
+                      <div className="space-y-2 mb-6">
+                        <div className="flex justify-between text-xs border-b border-gray-100 pb-1.5">
                           <span className="text-gray-500">BEDS</span>
                           <span className="font-medium">{property.beds}</span>
                         </div>
-                        <div className="flex justify-between text-sm border-b border-gray-100 pb-2">
+                        <div className="flex justify-between text-xs border-b border-gray-100 pb-1.5">
                           <span className="text-gray-500">BATHS</span>
                           <span className="font-medium">{property.baths}</span>
                         </div>
-                        <div className="flex justify-between text-sm border-b border-gray-100 pb-2">
+                        <div className="flex justify-between text-xs border-b border-gray-100 pb-1.5">
                           <span className="text-gray-500">SQFT</span>
                           <span className="font-medium">{property.sqft}</span>
                         </div>
-                        <div className="flex justify-between text-sm">
+                        <div className="flex justify-between text-xs">
                           <span className="text-gray-500">AREA</span>
                           <span className="font-medium">{property.area}</span>
                         </div>
@@ -656,7 +656,7 @@ const App = () => {
                     {/* View Details Link */}
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-gray-400 tracking-wider">CLICK FOR DETAILS</span>
-                      <svg className="w-5 h-5 group-hover:translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 group-hover:translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </div>
@@ -666,51 +666,51 @@ const App = () => {
             ))}
           </div>
           
-          <div className="text-center mt-16">
-            <button className="border border-gray-900 text-gray-900 px-16 py-5 text-sm font-light hover:bg-gray-900 hover:text-white transition-all duration-300">
+          <div className="text-center mt-10 md:mt-12">
+            <button className="border border-gray-900 text-gray-900 px-12 md:px-16 py-4 text-xs font-light hover:bg-gray-900 hover:text-white transition-all duration-300">
               VIEW ALL PROPERTIES
             </button>
           </div>
         </div>
       </section>
 
-      {/* Contact Section - Minimal */}
-      <section ref={contactRef} id="contact" className="py-32 px-4 w-full bg-white">
+      {/* Contact Section */}
+      <section ref={contactRef} id="contact" className="py-16 md:py-24 px-4 w-full bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-20 contact-animate">
-            <h2 className="text-7xl md:text-8xl lg:text-9xl font-light tracking-tight text-gray-900">
+          <div className="mb-12 md:mb-16 contact-animate">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-gray-900">
               LET'S
             </h2>
-            <h2 className="text-7xl md:text-8xl lg:text-9xl font-light tracking-tight text-gray-300 -mt-6 md:-mt-8">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-gray-300 -mt-4 md:-mt-6">
               CONNECT
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 contact-animate">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 contact-animate">
             {/* Contact Info */}
-            <div className="space-y-12">
+            <div className="space-y-8">
               <div>
-                <h3 className="text-xs text-gray-400 mb-3 tracking-wider">VISIT</h3>
-                <p className="text-2xl font-light text-gray-900">9663 Santa Monica Boulevard</p>
-                <p className="text-lg text-gray-500 mt-2">Beverly Hills, CA 90210</p>
+                <h3 className="text-xs text-gray-400 mb-2 tracking-wider">VISIT</h3>
+                <p className="text-xl font-light text-gray-900">9663 Santa Monica Boulevard</p>
+                <p className="text-base text-gray-500 mt-1">Beverly Hills, CA 90210</p>
               </div>
               
               <div>
-                <h3 className="text-xs text-gray-400 mb-3 tracking-wider">CONTACT</h3>
-                <p className="text-2xl font-light text-gray-900">ashi@realty.com</p>
-                <p className="text-lg text-gray-500 mt-2">+1 (310) 555-0123</p>
+                <h3 className="text-xs text-gray-400 mb-2 tracking-wider">CONTACT</h3>
+                <p className="text-xl font-light text-gray-900">ashi@realty.com</p>
+                <p className="text-base text-gray-500 mt-1">+1 (310) 555-0123</p>
               </div>
               
               <div>
-                <h3 className="text-xs text-gray-400 mb-4 tracking-wider">FOLLOW</h3>
-                <div className="flex space-x-6">
-                  <a href="#" className="text-gray-400 hover:text-gray-900 transition text-xl">
+                <h3 className="text-xs text-gray-400 mb-3 tracking-wider">FOLLOW</h3>
+                <div className="flex space-x-4">
+                  <a href="#" className="text-gray-400 hover:text-gray-900 transition text-lg">
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-gray-900 transition text-xl">
+                  <a href="#" className="text-gray-400 hover:text-gray-900 transition text-lg">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-gray-900 transition text-xl">
+                  <a href="#" className="text-gray-400 hover:text-gray-900 transition text-lg">
                     <i className="fab fa-facebook-f"></i>
                   </a>
                 </div>
@@ -719,25 +719,25 @@ const App = () => {
 
             {/* Form */}
             <div>
-              <form className="space-y-8">
+              <form className="space-y-6">
                 <input 
                   type="text" 
                   placeholder="NAME"
-                  className="w-full px-0 py-4 bg-transparent border-b border-gray-200 focus:outline-none focus:border-gray-900 text-lg font-light transition"
+                  className="w-full px-0 py-3 bg-transparent border-b border-gray-200 focus:outline-none focus:border-gray-900 text-base font-light transition"
                 />
                 <input 
                   type="email" 
                   placeholder="EMAIL"
-                  className="w-full px-0 py-4 bg-transparent border-b border-gray-200 focus:outline-none focus:border-gray-900 text-lg font-light transition"
+                  className="w-full px-0 py-3 bg-transparent border-b border-gray-200 focus:outline-none focus:border-gray-900 text-base font-light transition"
                 />
                 <textarea 
-                  rows="4" 
+                  rows="3" 
                   placeholder="MESSAGE"
-                  className="w-full px-0 py-4 bg-transparent border-b border-gray-200 focus:outline-none focus:border-gray-900 text-lg font-light transition resize-none"
+                  className="w-full px-0 py-3 bg-transparent border-b border-gray-200 focus:outline-none focus:border-gray-900 text-base font-light transition resize-none"
                 ></textarea>
                 <button 
                   type="submit" 
-                  className="w-full bg-gray-900 text-white py-5 text-sm font-light hover:bg-gray-800 transition-all duration-300 tracking-wide"
+                  className="w-full bg-gray-900 text-white py-4 text-xs font-light hover:bg-gray-800 transition-all duration-300 tracking-wide"
                 >
                   SEND MESSAGE
                 </button>
@@ -747,13 +747,13 @@ const App = () => {
         </div>
       </section>
 
-      {/* Footer - Minimal */}
+      {/* Footer */}
       <footer ref={footerRef} id="footer" className="bg-white text-gray-900 w-full border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 footer-animate">
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 footer-animate">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
-              <h3 className="text-2xl font-light mb-3">ASHI</h3>
+              <h3 className="text-xl font-light mb-2">ASHI</h3>
               <p className="text-xs text-gray-400 leading-relaxed tracking-wide">
                 LUXURY REAL ESTATE
               </p>
@@ -761,8 +761,8 @@ const App = () => {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-xs text-gray-400 mb-4 tracking-wider">EXPLORE</h4>
-              <ul className="space-y-3">
+              <h4 className="text-xs text-gray-400 mb-3 tracking-wider">EXPLORE</h4>
+              <ul className="space-y-2">
                 <li><a href="#home" className="text-sm text-gray-600 hover:text-gray-900 transition">Home</a></li>
                 <li><a href="#about" className="text-sm text-gray-600 hover:text-gray-900 transition">About</a></li>
                 <li><a href="#properties" className="text-sm text-gray-600 hover:text-gray-900 transition">Properties</a></li>
@@ -772,8 +772,8 @@ const App = () => {
 
             {/* Legal */}
             <div>
-              <h4 className="text-xs text-gray-400 mb-4 tracking-wider">LEGAL</h4>
-              <ul className="space-y-3">
+              <h4 className="text-xs text-gray-400 mb-3 tracking-wider">LEGAL</h4>
+              <ul className="space-y-2">
                 <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition">Privacy</a></li>
                 <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition">Terms</a></li>
                 <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition">Cookies</a></li>
@@ -781,9 +781,9 @@ const App = () => {
             </div>
           </div>
 
-          <div className="border-t border-gray-100 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center footer-animate">
+          <div className="border-t border-gray-100 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center footer-animate">
             <p className="text-xs text-gray-400">© 2025 ASHI REALTY. ALL RIGHTS RESERVED.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-4 mt-3 md:mt-0">
               <a href="#" className="text-xs text-gray-400 hover:text-gray-900 transition">PRIVACY POLICY</a>
               <a href="#" className="text-xs text-gray-400 hover:text-gray-900 transition">TERMS OF SERVICE</a>
             </div>
@@ -799,22 +799,22 @@ const App = () => {
             onClick={closePropertyDetail}
           ></div>
           
-          <div className="relative h-screen w-screen flex items-center justify-center p-4 md:p-8">
+          <div className="relative h-screen w-screen flex items-center justify-center p-2 md:p-4">
             <div className="modal-content relative w-full h-full opacity-0">
               
               {/* Close Button */}
               <button 
                 onClick={closePropertyDetail}
-                className="absolute top-4 right-4 z-50 w-12 h-12 bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 border border-white/20"
+                className="absolute top-2 right-2 md:top-4 md:right-4 z-50 w-10 h-10 bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 border border-white/20"
               >
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
 
               {/* Full Screen Content */}
               <div className="h-full flex flex-col md:flex-row">
-                {/* Left Side - Full Height Image Gallery */}
+                {/* Left Side - Image Gallery */}
                 <div className="w-full md:w-3/5 h-1/2 md:h-full relative bg-black">
                   <img 
                     src={selectedProperty.gallery[activeImage]} 
@@ -825,33 +825,33 @@ const App = () => {
                   {/* Navigation Arrows */}
                   <button 
                     onClick={prevImage}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 border border-white/20"
+                    className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 border border-white/20"
                   >
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
                   <button 
                     onClick={nextImage}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 border border-white/20"
+                    className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 border border-white/20"
                   >
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
 
                   {/* Image Counter */}
-                  <div className="absolute bottom-4 left-4 bg-black/50 backdrop-blur-md text-white px-4 py-2 text-sm border border-white/20">
+                  <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 bg-black/50 backdrop-blur-md text-white px-2 py-1 md:px-3 md:py-1.5 text-xs border border-white/20">
                     {activeImage + 1} / {selectedProperty.gallery.length}
                   </div>
 
                   {/* Thumbnails Strip */}
-                  <div className="absolute bottom-4 right-4 flex space-x-2">
+                  <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 flex space-x-1 md:space-x-2">
                     {selectedProperty.gallery.map((img, index) => (
                       <button
                         key={index}
                         onClick={() => setActiveImage(index)}
-                        className={`w-16 h-16 overflow-hidden transition-all ${
+                        className={`w-10 h-10 md:w-14 md:h-14 overflow-hidden transition-all ${
                           activeImage === index 
                             ? 'border-2 border-white scale-110' 
                             : 'opacity-50 hover:opacity-100'
@@ -864,64 +864,64 @@ const App = () => {
                 </div>
 
                 {/* Right Side - Property Details */}
-                <div className="w-full md:w-2/5 h-1/2 md:h-full bg-white overflow-y-auto p-8">
-                  <div className="space-y-8">
+                <div className="w-full md:w-2/5 h-1/2 md:h-full bg-white overflow-y-auto p-4 md:p-6">
+                  <div className="space-y-4 md:space-y-6">
                     <div>
-                      <h2 className="text-4xl font-light mb-3">{selectedProperty.title}</h2>
-                      <p className="text-sm text-gray-400">{selectedProperty.location}</p>
+                      <h2 className="text-2xl md:text-3xl font-light mb-2">{selectedProperty.title}</h2>
+                      <p className="text-xs text-gray-400">{selectedProperty.location}</p>
                     </div>
 
-                    <div className="flex items-baseline gap-3">
-                      <span className="text-5xl font-light">{selectedProperty.price}</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl md:text-4xl font-light">{selectedProperty.price}</span>
                       <span className="text-xs text-gray-400 cursor-pointer underline decoration-dotted">
                         CALCULATE MORTGAGE
                       </span>
                     </div>
 
-                    <div className="grid grid-cols-4 gap-4">
+                    <div className="grid grid-cols-4 gap-2">
                       {[
                         { label: "AREA", value: selectedProperty.area },
                         { label: "FLOORS", value: selectedProperty.floors },
                         { label: "BEDS", value: selectedProperty.beds },
                         { label: "BATHS", value: selectedProperty.baths },
                       ].map((item, index) => (
-                        <div key={index} className="bg-gray-50 p-4 text-center">
+                        <div key={index} className="bg-gray-50 p-2 md:p-3 text-center">
                           <p className="text-xs text-gray-400 mb-1">{item.label}</p>
-                          <p className="text-lg font-light">{item.value}</p>
+                          <p className="text-sm md:text-base font-light">{item.value}</p>
                         </div>
                       ))}
                     </div>
 
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1 md:gap-2">
                       {selectedProperty.views.map((view, index) => (
-                        <span key={index} className="bg-gray-100 px-4 py-2 text-sm">
+                        <span key={index} className="bg-gray-100 px-2 py-1 md:px-3 md:py-1.5 text-xs">
                           {view}
                         </span>
                       ))}
                       {selectedProperty.ecoFriendly && (
-                        <span className="bg-green-50 text-green-700 px-4 py-2 text-sm flex items-center">
-                          <span className="mr-2">🌱</span> ECO-FRIENDLY
+                        <span className="bg-green-50 text-green-700 px-2 py-1 md:px-3 md:py-1.5 text-xs flex items-center">
+                          <span className="mr-1">🌱</span> ECO-FRIENDLY
                         </span>
                       )}
                     </div>
 
-                    <div className="border-t border-gray-100 pt-8">
-                      <p className="text-gray-600 leading-relaxed">
+                    <div className="border-t border-gray-100 pt-4 md:pt-6">
+                      <p className="text-sm text-gray-600 leading-relaxed">
                         {selectedProperty.description}
                       </p>
                     </div>
 
-                    <div className="flex space-x-4">
+                    <div className="flex space-x-3">
                       <button 
                         onClick={() => {
                           closePropertyDetail();
                           openContactPopup(selectedProperty);
                         }}
-                        className="flex-1 bg-gray-900 text-white py-4 text-sm font-light hover:bg-gray-800 transition-all"
+                        className="flex-1 bg-gray-900 text-white py-3 text-xs font-light hover:bg-gray-800 transition-all"
                       >
                         INQUIRE
                       </button>
-                      <button className="flex-1 border border-gray-900 text-gray-900 py-4 text-sm font-light hover:bg-gray-900 hover:text-white transition-all">
+                      <button className="flex-1 border border-gray-900 text-gray-900 py-3 text-xs font-light hover:bg-gray-900 hover:text-white transition-all">
                         SCHEDULE TOUR
                       </button>
                     </div>
@@ -943,35 +943,35 @@ const App = () => {
           
           <div 
             ref={popupRef}
-            className="relative bg-white max-w-md w-full p-8"
+            className="relative bg-white max-w-md w-full p-6 md:p-8"
           >
             <button 
               onClick={closeContactPopup}
-              className="absolute top-4 right-4 w-8 h-8 border border-gray-200 flex items-center justify-center hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all"
+              className="absolute top-3 right-3 w-8 h-8 border border-gray-200 flex items-center justify-center hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-light mb-2">INQUIRE ABOUT</h3>
-              <p className="text-sm text-gray-400">{selectedProperty.title}</p>
+            <div className="text-center mb-4 md:mb-6">
+              <h3 className="text-xl md:text-2xl font-light mb-1">INQUIRE ABOUT</h3>
+              <p className="text-xs text-gray-400">{selectedProperty.title}</p>
             </div>
 
             {submitSuccess ? (
-              <div className="text-center py-8">
-                <div className="w-16 h-16 bg-green-100 flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="text-center py-6">
+                <div className="w-12 h-12 bg-green-100 flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <p className="text-lg font-light mb-2">THANK YOU</p>
+                <p className="text-base font-light mb-1">THANK YOU</p>
                 <p className="text-xs text-gray-400">WE'LL CONTACT YOU SHORTLY</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                <div className="mb-6">
+                <div className="mb-4 md:mb-6">
                   <label className="block text-xs text-gray-400 mb-2 tracking-wider">
                     PHONE NUMBER
                   </label>
@@ -980,7 +980,7 @@ const App = () => {
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     placeholder="+1 (555) 000-0000"
-                    className="w-full px-4 py-3 border border-gray-200 focus:outline-none focus:border-gray-900 text-lg font-light"
+                    className="w-full px-3 py-2 md:px-4 md:py-3 border border-gray-200 focus:outline-none focus:border-gray-900 text-base font-light"
                     required
                   />
                   <p className="text-xs text-gray-400 mt-2">
@@ -991,7 +991,7 @@ const App = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gray-900 text-white py-4 text-sm font-light hover:bg-gray-800 transition-all disabled:opacity-50"
+                  className="w-full bg-gray-900 text-white py-3 text-xs font-light hover:bg-gray-800 transition-all disabled:opacity-50"
                 >
                   {isSubmitting ? 'SENDING...' : 'SEND DETAILS'}
                 </button>
